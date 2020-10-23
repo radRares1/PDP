@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="388b0923-e1de-4fbd-a6a0-bbe08999fcea" name="Default Changelist" comment="" />
+    <list default="true" id="388b0923-e1de-4fbd-a6a0-bbe08999fcea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab1/out/production/lab/META-INF/lab.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/entities/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/entities/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/entities/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/entities/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/utils/Utils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,19 +27,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1j6p6mUGae9xZdx3JUya7IBNsnE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -59,6 +80,9 @@
       <option name="presentableId" value="Default" />
       <updated>1603134222542</updated>
       <workItem from="1603134325784" duration="4451000" />
+      <workItem from="1603196495680" duration="2448000" />
+      <workItem from="1603379321583" duration="78000" />
+      <workItem from="1603460561592" duration="4562000" />
     </task>
     <servers />
   </component>
@@ -70,10 +94,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="78" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1603137320619" />
-    <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1603138854142">
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1603468096033">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603138854142" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1603468096033" />
+    <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1603379404981">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603379404981" />
     <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1603138224998">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

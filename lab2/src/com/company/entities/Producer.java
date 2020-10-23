@@ -1,20 +1,21 @@
 package com.company.entities;
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Producer implements Runnable {
+public class Producer extends Thread {
 
     private ReentrantLock mutex;
-    private boolean hasProduced;
+    private Condition hasProduced;
     private ArrayList<Integer> vectorOne,vectorTwo;
     private ArrayList<Integer> result;
 
     public Producer(ArrayList<Integer> v1,ArrayList<Integer>v2){
         mutex = new ReentrantLock();
-        hasProduced = false;
+        hasProduced = mutex.newCondition();
         vectorOne = v1;
         vectorTwo = v2;
         result = new ArrayList<>();
@@ -26,7 +27,6 @@ public class Producer implements Runnable {
         mutex.lock();
         //for simplicity we assume that the vectors have the same length
         IntStream.range(0,vectorOne.size()).forEach(e -> result.add(vectorOne.get(e)*vectorTwo.get(e)));
-        hasProduced = true;
         mutex.unlock();
 
     }
@@ -39,9 +39,9 @@ public class Producer implements Runnable {
         this.vectorTwo = vectorTwo;
     }
 
-    public boolean hasProduced() {
-        return hasProduced;
-    }
+//    public boolean hasProduced() {
+//        return hasProduced;
+//    }
 
     public ArrayList<Integer> getResult() {
         return result;

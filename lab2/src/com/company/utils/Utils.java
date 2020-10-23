@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 
 public final class Utils {
 
-    public static ArrayList<Integer> generateProducts(int sizeOfVector) {
+    public static ArrayList<Integer> generateVector(int sizeOfVector) {
 
         ArrayList<Integer> result = new ArrayList<>();
         Random rand = new Random();
