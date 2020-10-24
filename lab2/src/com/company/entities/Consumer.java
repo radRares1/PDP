@@ -1,37 +1,53 @@
 package com.company.entities;
 
+import com.company.Main;
+
+import java.net.Inet4Address;
 import java.util.ArrayList;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 public class Consumer implements Runnable {
 
-    private ReentrantLock mutex;
-    private boolean hasConsumed;
-    private ArrayList<Integer> inputFromConsumer;
-    private Integer result;
+    final ArrayList<Integer> resultFromProducer;
+    int sum;
 
-    public Consumer(ArrayList<Integer> input){
-        mutex = new ReentrantLock();
-        hasConsumed = false;
-        inputFromConsumer = input;
-        result = 0;
+    public Consumer(ArrayList<Integer> list) {
+        this.resultFromProducer = Main.list;
+        sum = Main.sum;
     }
 
     @Override
     public void run() {
 
-        mutex.lock();
-        result = inputFromConsumer.stream().reduce(0, Integer::sum);
-        hasConsumed = true;
-        mutex.unlock();
+        synchronized (resultFromProducer) {
+
+            for (int i = 0; i < 4; i++) {
+
+                if (resultFromProducer.isEmpty()) {
+                    try {
+                        System.out.println("consumer waiting for producer");
+                        resultFromProducer.wait();
+
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
+                int currentElement = resultFromProducer.remove(0);
+                sum += currentElement;
+                System.out.println("consume = " + currentElement);
+                System.out.println("current sum is " + sum);
+                //resultFromProducer.notifyAll();
+                resultFromProducer.notifyAll();
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+
+            }
+        }
 
     }
 
-    public void setInputFromConsumer(ArrayList<Integer> inputFromConsumer) {
-        this.inputFromConsumer = inputFromConsumer;
-    }
 
-    public Integer getResult() {
-        return result;
-    }
 }

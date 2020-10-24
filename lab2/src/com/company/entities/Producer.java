@@ -1,49 +1,56 @@
 package com.company.entities;
 
+import com.company.Main;
+
 import java.util.ArrayList;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 public class Producer implements Runnable {
 
-    private ReentrantLock mutex;
-    private boolean hasProduced;
-    private ArrayList<Integer> vectorOne,vectorTwo;
-    private ArrayList<Integer> result;
+    ArrayList<Integer> vector1, vector2;
+    final ArrayList<Integer> result;
 
-    public Producer(ArrayList<Integer> v1,ArrayList<Integer>v2){
-        mutex = new ReentrantLock();
-        hasProduced = false;
-        vectorOne = v1;
-        vectorTwo = v2;
-        result = new ArrayList<>();
+    public Producer(ArrayList<Integer> v1, ArrayList<Integer> v2) {
+        this.vector1 = v1;
+        this.vector2 = v2;
+        result = Main.list;
     }
 
     @Override
     public void run() {
+        synchronized (result) {
 
-        mutex.lock();
-        //for simplicity we assume that the vectors have the same length
-        IntStream.range(0,vectorOne.size()).forEach(e -> result.add(vectorOne.get(e)*vectorTwo.get(e)));
-        hasProduced = true;
-        mutex.unlock();
 
-    }
+            for (int i = 0; i < 4; i++) {
 
-    public void setVectorOne(ArrayList<Integer> vectorOne) {
-        this.vectorOne = vectorOne;
-    }
+                if (!result.isEmpty()) {
+                    try {
+                        System.out.println("producer waiting for consumer");
+                        result.wait();
 
-    public void setVectorTwo(ArrayList<Integer> vectorTwo) {
-        this.vectorTwo = vectorTwo;
-    }
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                }
 
-    public boolean hasProduced() {
-        return hasProduced;
-    }
+                int prod = vector1.remove(0) * vector2.remove(0);
+                System.out.println("produce=" + prod);
+                result.add(prod);
+                result.notifyAll();
 
-    public ArrayList<Integer> getResult() {
-        return result;
+                System.out.println(Main.list);
+
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+
+
+                }
+
+            }
+        }
     }
 }
+
+
