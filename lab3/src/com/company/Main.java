@@ -18,9 +18,14 @@ public class Main {
 
         ThreadOps thrds = new ThreadOps(4,matrix1,matrix2);
 
+        //simple thread runs
         //thrds.runThreadColumns();
         //thrds.runThreadRows();
-        thrds.runThreadK();
+        //thrds.runThreadK();
 
+        //threadpool runs
+        //thrds.runPoolRows();
+        //thrds.runPoolCols();
+        thrds.runPoolK();
     }
 }
