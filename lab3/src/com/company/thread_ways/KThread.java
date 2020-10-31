@@ -19,6 +19,7 @@ public class KThread implements Runnable {
         synchronized (resultK) {
             int size = resultK.getSize();
             for (int i = taskNumber; i < size*size; i += noTasks) {
+                System.out.println(i);
                 var resultElement = Utils.computeElement(m1.getRow(i / size), m2.getCol(i % size));
                 resultK.setElement(i / size, i % size, resultElement);
             }

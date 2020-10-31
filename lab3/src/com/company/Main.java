@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
+        var startTime = System.currentTimeMillis()/1000.0;
+
         var matrix1 = generateRandomMatrix(9);
         var matrix2 = generateRandomMatrix(9);
 
@@ -16,16 +18,22 @@ public class Main {
         System.out.println("\nmatrix 2");
         matrix2.getElements().forEach(System.out::println);
 
-        ThreadOps thrds = new ThreadOps(4,matrix1,matrix2);
+        ThreadOps thrds = new ThreadOps(9,matrix1,matrix2);
 
         //simple thread runs
+
+        thrds.runThreadRows();
         //thrds.runThreadColumns();
-        //thrds.runThreadRows();
         //thrds.runThreadK();
 
         //threadpool runs
+
         //thrds.runPoolRows();
         //thrds.runPoolCols();
-        thrds.runPoolK();
+        //thrds.runPoolK();
+
+        var endTime = System.currentTimeMillis()/1000.0;
+
+        System.out.println(endTime - startTime);
     }
 }
