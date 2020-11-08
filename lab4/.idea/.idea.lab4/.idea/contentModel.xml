@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Rares2\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Rares2\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_lab4.1667984664.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4" t="IncludeFlat">
+      <e p="lab4" t="IncludeRecursive">
+        <e p="AsyncCallbacks.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HTTPParser.cs" t="Include" />
+        <e p="lab4.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SocketWrapper.cs" t="Include" />
+        <e p="WithTasks.cs" t="Include" />
+      </e>
+      <e p="lab4.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

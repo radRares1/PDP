@@ -1,0 +1,6 @@
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

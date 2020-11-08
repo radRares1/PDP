@@ -1,0 +1,6 @@
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\bin\Debug\lab4.exe
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\bin\Debug\lab4.pdb
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\obj\Debug\lab4.csprojAssemblyReference.cache
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\obj\Debug\lab4.csproj.CoreCompileInputs.cache
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\obj\Debug\lab4.exe
+C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4\lab4\obj\Debug\lab4.pdb
