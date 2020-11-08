@@ -105,7 +105,7 @@ namespace lab4
         {
             var socketWrap = (SocketWrapper) ar.AsyncState;
             var socket = socketWrap.sock;
-            var id = socketWrap.id;
+           
 
             //Console.WriteLine("yea");
 
@@ -117,7 +117,7 @@ namespace lab4
                 socketWrap.responseContent.Append(Encoding.ASCII.GetString(socketWrap.buffer, 0, requestFromStart));
                 //Console.WriteLine(Encoding.ASCII.GetString(socketWrap.buffer, 0, requestFromStart));
 
-                //we re-try if we didn't get a respone
+                //we try to get the respone header
                 if (!HTTPParser.gotResponseHeader(socketWrap.responseContent.ToString()))
                 {
                     socket.BeginReceive(socketWrap.buffer, 0, 512, 0, startReceive, socketWrap);

@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace lab4
 {
@@ -17,7 +18,10 @@ namespace lab4
         public int id; // index of obj
         public string hostname; // website address
         public string endpoint; // website navigation specifics
-
         public IPEndPoint remoteEndPoint; // ip of endpoint website
+        
+        public ManualResetEvent connectFinished = new ManualResetEvent(false);
+        public ManualResetEvent sendFinished = new ManualResetEvent(false);
+        public ManualResetEvent receiveFinished = new ManualResetEvent(false);
     }
 }
