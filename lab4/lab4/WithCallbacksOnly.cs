@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace lab4
 {
-    public static class AsyncCallbacks
+    public static class WithCallbacksOnly
     {
         //wrap function
         //for each of the url, start the callbacks

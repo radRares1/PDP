@@ -23,28 +23,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9f99413-6ca9-4c3e-a283-695dc33b7184" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/BaseTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/ConsoleApplication1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab4/WithAsyncTasks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/.idea/.idea.ConsoleApplication1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/BaseTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/ConsoleApplication1.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/DirCallBacks.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/HttpParser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/Obj.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/bin/Debug/ConsoleApplication1.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ConsoleApplication1/ConsoleApplication1/obj/Debug/ConsoleApplication1.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/out/production/lab2/com/company/entities/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/out/production/lab2/com/company/entities/Consumer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab2/src/com/company/entities/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/src/com/company/entities/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/src/com/company/ThreadOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/com/company/ThreadOps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3/src/com/company/thread_ways/RowThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/src/com/company/thread_ways/RowThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab4/AsyncCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/AsyncCallbacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/AsyncCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/WithCallbacksOnly.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab4/SocketWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/SocketWrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab4/WithTasks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/WithTasks.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/bin/Debug/lab4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/bin/Debug/lab4.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/bin/Debug/lab4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/bin/Debug/lab4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/lab4.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/lab4.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.pdb" afterDir="false" />
@@ -62,9 +75,11 @@
       <list>
         <option value="$PROJECT_DIR$/lab4/HTTPParser.cs" />
         <option value="$PROJECT_DIR$/lab4/SocketWrapper.cs" />
-        <option value="$PROJECT_DIR$/lab4/Program.cs" />
         <option value="$PROJECT_DIR$/lab4/AsyncCallbacks.cs" />
         <option value="$PROJECT_DIR$/lab4/WithTasks.cs" />
+        <option value="$PROJECT_DIR$/lab4/Program.cs" />
+        <option value="$PROJECT_DIR$/lab4/WithCallbacksOnly.cs" />
+        <option value="$PROJECT_DIR$/lab4/WithAsyncTasks.cs" />
       </list>
     </option>
   </component>
@@ -110,7 +125,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604776092418</updated>
-      <workItem from="1604776185519" duration="27318000" />
+      <workItem from="1604776185519" duration="28812000" />
     </task>
     <servers />
   </component>
@@ -132,22 +147,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="158" key="GridCell.Tab.0.bottom" timestamp="1604854375307">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1604855945077">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="158" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604854375307" />
-    <state width="1323" height="158" key="GridCell.Tab.0.center" timestamp="1604854375306">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1604855945077" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1604855945077">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="158" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604854375306" />
-    <state width="1323" height="158" key="GridCell.Tab.0.left" timestamp="1604854375306">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1604855945077" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1604855945077">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="158" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604854375306" />
-    <state width="1323" height="158" key="GridCell.Tab.0.right" timestamp="1604854375307">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1604855945077" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1604855945077">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="158" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604854375307" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1604855945077" />
     <state x="275" y="100" key="Rider.ProjectTemplateDialog.Size" timestamp="1604841705747">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

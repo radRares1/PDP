@@ -13,7 +13,8 @@ namespace lab4
 
             links = new List<String> {"emag.ro", "bucataras.ro/retete","olx.ro"};
             //AsyncCallbacks.run(links);
-            WithTasks.run(links);
+            //WithTasks.run(links);
+            WithAsyncTasks.run(links);
         }
     }
     

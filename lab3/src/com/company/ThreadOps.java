@@ -29,8 +29,6 @@ public final class ThreadOps {
         Runnable t3 = new RowThread(40,59,"3");
         Runnable t4 = new RowThread(60,80,"4");
 
-
-
         // creates a thread pool with noumber of thredas
         // threads as the fixed pool size
         ExecutorService pool = Executors.newFixedThreadPool(2);

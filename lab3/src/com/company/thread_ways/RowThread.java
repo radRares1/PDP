@@ -27,7 +27,6 @@ public class RowThread implements Runnable {
 
             //System.out.println(currentElementi);
             for (int i = firstIndex; i <= lastIndex; i++) {
-
                 var resultElement = Utils.computeElement(m1.getRow(i / size), m2.getCol(i % size));
                 resultRow.setElement(i / size, i % size, resultElement);
             }

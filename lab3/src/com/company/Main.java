@@ -22,7 +22,7 @@ public class Main {
 
         //simple thread runs
 
-        thrds.runThreadRows();
+        //thrds.runThreadRows();
         //thrds.runThreadColumns();
         //thrds.runThreadK();
 
@@ -30,7 +30,7 @@ public class Main {
 
         //thrds.runPoolRows();
         //thrds.runPoolCols();
-        //thrds.runPoolK();
+        thrds.runPoolK();
 
         var endTime = System.currentTimeMillis()/1000.0;
 

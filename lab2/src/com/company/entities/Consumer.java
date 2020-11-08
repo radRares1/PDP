@@ -25,7 +25,7 @@ public class Consumer implements Runnable {
 
                 if (resultFromProducer.isEmpty()) {
                     try {
-                        System.out.println("consumer waiting for producer");
+                        System.out.println("consumer waiting for producer ");
                         resultFromProducer.wait();
 
                     } catch (InterruptedException e) {
@@ -36,18 +36,14 @@ public class Consumer implements Runnable {
                 sum += currentElement;
                 System.out.println("consume = " + currentElement);
                 System.out.println("current sum is " + sum);
-                //resultFromProducer.notifyAll();
+
                 resultFromProducer.notifyAll();
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
-
             }
         }
-
     }
-
-
 }

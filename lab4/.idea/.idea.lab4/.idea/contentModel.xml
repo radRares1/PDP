@@ -5,7 +5,6 @@
     <e p="C:\Users\Rares2\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_lab4.1667984664.00" t="ExcludeRecursive" />
     <e p="C:\Users\Rares2\Desktop\an3\sem1Eu\PDP\PDP\lab4" t="IncludeFlat">
       <e p="lab4" t="IncludeRecursive">
-        <e p="AsyncCallbacks.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="HTTPParser.cs" t="Include" />
         <e p="lab4.csproj" t="IncludeRecursive" />
@@ -15,6 +14,8 @@
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
         <e p="SocketWrapper.cs" t="Include" />
+        <e p="WithAsyncTasks.cs" t="Include" />
+        <e p="WithCallbacksOnly.cs" t="Include" />
         <e p="WithTasks.cs" t="Include" />
       </e>
       <e p="lab4.sln" t="IncludeFlat" />

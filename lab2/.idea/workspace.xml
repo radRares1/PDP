@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="388b0923-e1de-4fbd-a6a0-bbe08999fcea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab2/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab2/com/company/entities/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab2/com/company/entities/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab2/com/company/entities/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab2/com/company/entities/Producer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/entities/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/entities/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/entities/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/entities/Producer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../FLCD/lab/FormalLanguageAndCompilerDesign/lab2" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -74,7 +69,9 @@
       <updated>1603134222542</updated>
       <workItem from="1603134325784" duration="4451000" />
       <workItem from="1603560952646" duration="8185000" />
-      <workItem from="1603570174355" duration="1432000" />
+      <workItem from="1603570174355" duration="2475000" />
+      <workItem from="1603800252775" duration="3096000" />
+      <workItem from="1603987765182" duration="29000" />
     </task>
     <servers />
   </component>
@@ -90,25 +87,25 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1603562714850" />
-    <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1603569549867">
+    <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1603987801093">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603569549867" />
-    <state width="1323" height="195" key="GridCell.Tab.0.bottom" timestamp="1603572424743">
+    <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603987801093" />
+    <state width="1323" height="120" key="GridCell.Tab.0.bottom" timestamp="1603806559802">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603572424743" />
-    <state width="1323" height="195" key="GridCell.Tab.0.center" timestamp="1603572424742">
+    <state width="1323" height="120" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1603806559802" />
+    <state width="1323" height="120" key="GridCell.Tab.0.center" timestamp="1603806559802">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603572424742" />
-    <state width="1323" height="195" key="GridCell.Tab.0.left" timestamp="1603572424742">
+    <state width="1323" height="120" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1603806559801" />
+    <state width="1323" height="120" key="GridCell.Tab.0.left" timestamp="1603806559801">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603572424742" />
-    <state width="1323" height="195" key="GridCell.Tab.0.right" timestamp="1603572424742">
+    <state width="1323" height="120" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1603806559801" />
+    <state width="1323" height="120" key="GridCell.Tab.0.right" timestamp="1603806559802">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="195" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603572424742" />
+    <state width="1323" height="120" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1603806559802" />
   </component>
 </project>

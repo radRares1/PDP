@@ -38,11 +38,12 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="AsyncCallbacks.cs" />
+        <Compile Include="WithCallbacksOnly.cs" />
         <Compile Include="HTTPParser.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="SocketWrapper.cs" />
+        <Compile Include="WithAsyncTasks.cs" />
         <Compile Include="WithTasks.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
