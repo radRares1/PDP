@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3eb2d415-29bd-4ce6-84e5-e45108693def" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/bin/Debug/lab4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/bin/Debug/lab4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/bin/Debug/lab4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/bin/Debug/lab4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4/obj/Debug/lab4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/lab4/obj/Debug/lab4.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../FLCD/lab/FormalLanguageAndCompilerDesign/FiniteAutomata" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,10 +54,17 @@
       <option name="presentableId" value="Default" />
       <updated>1605009439594</updated>
       <workItem from="1605009446251" duration="162000" />
+      <workItem from="1605010516880" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="127" key="FileChooserDialogImpl" timestamp="1605011242398">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="127" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605011242398" />
   </component>
 </project>

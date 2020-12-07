@@ -18,7 +18,7 @@ namespace lab4
         public int id; // index of obj
         public string hostname; // website address
         public string endpoint; // website navigation specifics
-        public IPEndPoint remoteEndPoint; // ip of endpoint website
+        public IPEndPoint remoteEndPoint; // ip of endpoint websit
         
         public ManualResetEvent connectFinished = new ManualResetEvent(false);
         public ManualResetEvent sendFinished = new ManualResetEvent(false);
