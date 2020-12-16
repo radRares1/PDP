@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Polynomial {
 
-    int[] coefficients ;
+    private int[] coefficients ;
 
     public Polynomial(int[] coeffs) {
         this.coefficients = coeffs;
