@@ -60,10 +60,12 @@ public class Utils {
                     ExecutorService ex = Executors.newSingleThreadExecutor();
                     final int vertex = i;
                     final int count = pathCount;
+
                     final Runnable task = () -> {
                         try{
-                            System.out.println("ok");
+                            //System.out.println("ok");
                             search(vertex,path,count);
+
                         } catch (Exception e) {
                            throw new RuntimeException(e.getMessage());
                         }
@@ -72,7 +74,7 @@ public class Utils {
                     ex.submit(task).get();
                 }
 
-                //re-place the removed edge so the paths can be correctly used
+                //replace the removed edge so the paths can be correctly used
                 graph.get(currentVertex).set(i, 1);
                 graph.get(i).set(currentVertex, 1);
                 //delete the path after it was checked

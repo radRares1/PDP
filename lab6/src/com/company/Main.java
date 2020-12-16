@@ -79,8 +79,8 @@ public class Main {
 
         try {
 
-//            Utils u1 = new Utils(graphOk);
-//            u1.startSearch();
+            Utils u1 = new Utils(graphOk);
+            u1.startSearch();
 
 //            Utils u2 = new Utils(graphNotOk);
 //            u2.startSearch();
