@@ -32,7 +32,6 @@ public class Main {
             bufferStart[0] = startPos;
             bufferStop[0] = stopPos;
 
-
             MPI.COMM_WORLD.Send(aCoef, 0, aCoef.length,MPI.INT,i,0);
             MPI.COMM_WORLD.Send(bCoef, 0,bCoef.length,MPI.INT,i,0);
             MPI.COMM_WORLD.Send(bufferStart, 0,1,MPI.INT,i,0);
@@ -77,24 +76,30 @@ public class Main {
             }
         }
         var a = new Polynomial(re);
-        //System.out.println("Partial result of rank " + MPI.COMM_WORLD.Rank() + " is: ");
+        System.out.println("Partial result of rank " + MPI.COMM_WORLD.Rank() + " is: ");
         System.out.println(a.toString());
         MPI.COMM_WORLD.Send(re, 0, re.length, MPI.INT, 0, 0);
     }
 
-    public static void startKaratsuba(Polynomial a, Polynomial b){
+    public static void startKaratsuba(Polynomial a, Polynomial b,int noProc){
 
-        var result = new Polynomial(karatsubaRec(a.getCoefficients(),b.getCoefficients()));
+        var result = new Polynomial(karatsubaRec(a.getCoefficients(),b.getCoefficients(),noProc,0));
+        System.out.println("final result");
         System.out.println(result);
 
     }
 
-    public static int[] karatsubaRec(int[] a, int[] b)
+    public static int[] karatsubaRec(int[] a, int[] b,int noProc,int currentId)
     {
         //base case
+        //System.out.println(currentId);
         int[] product = new int[2*a.length];
         if(a.length==1){
-            product[0] = a[0]*b[0];
+            //System.out.println("size is one");
+            product[2*a.length-1] = a[0]*b[0];
+            System.out.println("partial result in main");
+            var temp = new Polynomial(product);
+            System.out.println(temp.toString());
             return product;
         }
 
@@ -119,49 +124,50 @@ public class Main {
         }
 
         int[] resultLow, resultLowHigh;
-        int[] resultHigh = new int[2*aHigh.length];
+        int[] resultHigh;
 
-        if(MPI.COMM_WORLD.Size()>=3)
+        if(noProc>=3)
         {
             //make sure we have at least 3 processes to use
             //to split the poly in three parts
             int[] lengths = new int[4];
-            lengths[0] = MPI.COMM_WORLD.Size()/3;
+            lengths[0] = noProc/3;
             lengths[1] = aLow.length;
             lengths[2] = bLow.length;
-            lengths[3] = MPI.COMM_WORLD.Rank();
-            MPI.COMM_WORLD.Send(lengths,0,lengths.length,MPI.INT,(MPI.COMM_WORLD.Rank()+lengths[0])%4,1);
-            MPI.COMM_WORLD.Send(aLow,0,aLow.length,MPI.INT,(MPI.COMM_WORLD.Rank()+lengths[0])%4,2);
-            MPI.COMM_WORLD.Send(bLow,0,bLow.length,MPI.INT,(MPI.COMM_WORLD.Rank()+lengths[0])%4,3);
+            lengths[3] = currentId;
+            MPI.COMM_WORLD.Send(lengths,0,lengths.length,MPI.INT,currentId+lengths[0],1);
+            MPI.COMM_WORLD.Send(aLow,0,aLow.length,MPI.INT,currentId+lengths[0],2);
+            MPI.COMM_WORLD.Send(bLow,0,bLow.length,MPI.INT,currentId+lengths[0],3);
             lengths[1] = aLowHigh.length;
             lengths[2] = bLowHigh.length;
-            MPI.COMM_WORLD.Send(lengths,0,lengths.length,MPI.INT,(MPI.COMM_WORLD.Rank()+2*lengths[0])%4,1);
-            MPI.COMM_WORLD.Send(aLowHigh,0,aLowHigh.length,MPI.INT,(MPI.COMM_WORLD.Rank()+2*lengths[0])%4,2);
-            MPI.COMM_WORLD.Send(bLowHigh,0,bLowHigh.length,MPI.INT,(MPI.COMM_WORLD.Rank()+2*lengths[0])%4,3);
+            MPI.COMM_WORLD.Send(lengths,0,lengths.length,MPI.INT,currentId+2*lengths[0],1);
+            MPI.COMM_WORLD.Send(aLowHigh,0,aLowHigh.length,MPI.INT,currentId+2*lengths[0],2);
+            MPI.COMM_WORLD.Send(bLowHigh,0,bLowHigh.length,MPI.INT,currentId+2*lengths[0],3);
 
-            resultHigh = karatsubaRec(aHigh,bHigh);
+            resultHigh = karatsubaRec(aHigh,bHigh,lengths[0],currentId);
 
             //get the results
             int[] lowSize = new int[1];
             int[] lowHighSize = new int[1];
-            MPI.COMM_WORLD.Recv(lowSize,0,1,MPI.INT,(MPI.COMM_WORLD.Rank()+lengths[0])%4,1);
-            MPI.COMM_WORLD.Recv(lowHighSize,0,1,MPI.INT,(MPI.COMM_WORLD.Rank()+2*lengths[0])%4,1);
+            MPI.COMM_WORLD.Recv(lowSize,0,1,MPI.INT,currentId+lengths[0],4);
+            MPI.COMM_WORLD.Recv(lowHighSize,0,1,MPI.INT,currentId+2*lengths[0],4);
             resultLow = new int[lowSize[0]];
             resultLowHigh = new int[lowHighSize[0]];
 
-            MPI.COMM_WORLD.Recv(resultLow,0,1,MPI.INT,(MPI.COMM_WORLD.Rank()+lengths[0])%4,2);
-            MPI.COMM_WORLD.Recv(resultLowHigh,0,1,MPI.INT,(MPI.COMM_WORLD.Rank()+2*lengths[0])%4,2);
+            MPI.COMM_WORLD.Recv(resultLow,0,resultLow.length,MPI.INT,currentId+lengths[0],5);
+            MPI.COMM_WORLD.Recv(resultLowHigh,0,resultLowHigh.length,MPI.INT,currentId+2*lengths[0],5);
 
+            noProc -= 2 * ((noProc / 3));
         }
         else
         {
-            resultLow = karatsubaRec(aLow,bLow);
-            resultHigh = karatsubaRec(aHigh,bHigh);
-            resultLowHigh = karatsubaRec(aLowHigh,bLowHigh);
+            //System.out.println("yes");
+            resultLow = karatsubaRec(aLow,bLow,1,currentId);
+            resultHigh = karatsubaRec(aHigh,bHigh,1,currentId);
+            resultLowHigh = karatsubaRec(aLowHigh,bLowHigh,1,currentId);
         }
 
-        System.out.println(resultLow[0]);
-
+        //System.out.println("got here");
         int[] resultMiddle = new int[a.length];
 
 
@@ -169,17 +175,22 @@ public class Main {
             resultMiddle[i] = resultLowHigh[i] - resultLow[i] - resultHigh[i];
         }
 
-        for (int i = 0; i < product.length; i++) {
+        for (int i = 0; i < a.length; i++) {
             product[i] += resultLow[i];
             product[i + a.length] += resultHigh[i];
             product[i + halfSize] += resultMiddle[i];
         }
 
+        var temp = new Polynomial(product);
+        System.out.println("partial result in main");
+        System.out.println(temp.toString());
+
         return product;
 
     }
 
-    static void partialKaratsuba(){
+    static void partialKaratsuba(int currentId){
+
         int[] lenghts = new int[4];
 
         MPI.COMM_WORLD.Recv(lenghts,0,4,MPI.INT,MPI.ANY_SOURCE,1);
@@ -190,20 +201,26 @@ public class Main {
         MPI.COMM_WORLD.Recv(a,0,lenghts[1],MPI.INT,source,2);
         MPI.COMM_WORLD.Recv(b,0,lenghts[2],MPI.INT,source,3);
 
+        int[] result = karatsubaRec(a,b,lenghts[3],currentId);
+        //System.out.println(source);
+        var poli = new Polynomial(result);
+        System.out.println("partial result in worker");
+        System.out.println(poli.toString());
 
-        int[] result = karatsubaRec(a,b);
         int[] resultSize = new int[1];
         resultSize[0] = result.length;
 
-        MPI.COMM_WORLD.Send(resultSize,0,1,MPI.INT,source,1);
-        MPI.COMM_WORLD.Send(result,0,result.length,MPI.INT,source,2);
+        MPI.COMM_WORLD.Send(resultSize,0,1,MPI.INT,source,4);
+        MPI.COMM_WORLD.Send(result,0,result.length,MPI.INT,source,5);
 
     }
 
 
 
     public static void main(String[] args) {
+
         MPI.Init(args);
+        var startTime = System.currentTimeMillis()/1000.0;
         int rank = MPI.COMM_WORLD.Rank();
         int polySize = 4;
         //main
@@ -213,19 +230,22 @@ public class Main {
             var testPoli = new Polynomial(new int[]{1, 2, 1, 1});//,1,1,1,1,1,1,1,1,1,1,1,1)));
             var testPoli2 = new Polynomial(new int[]{1, 2, 1, 1});//,1,1,1,1,1,1,1,1,1,1,1,1)));
 
-            //startO2(testPoli, testPoli2);
-            startKaratsuba(testPoli, testPoli2);
+            startO2(testPoli, testPoli2);
+            //startKaratsuba(testPoli, testPoli2,MPI.COMM_WORLD.Size());
 
         }
         else
         {
-            //System.out.println(rank);
-            //partialO2(polySize);
-            partialKaratsuba();
+            partialO2(polySize);
+            //partialKaratsuba(rank);
         }
 
-        //System.out.println("Hello world from <"+me+"> from <"+size);
+        var endTime = System.currentTimeMillis()/1000.0;
+
+        //System.out.println(endTime - startTime);
+
         MPI.Finalize();
+
     }
 
 
