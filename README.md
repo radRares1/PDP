@@ -8,3 +8,4 @@ lab4 - http protocol parser implemented synchronous only with socket callbacks a
 lab5 - parallelizing techniques, compute the multiplication of two polynomials of arbitrary degree with the normal schoolbook method and with karatsuba method, both sequential and parallel version and compare them <br />
 lab6 - find a hamiltonean cycle in a directed graph using threads, document the performance <br />
 lab7 - use mpi programming to compute the multiplication of two polynomials both with O(n^2) alg and the karatsuba and compare with the regular implementations from lab5 <br />
+lab8 - implement a simple distributed shared memory mechanism, also used mpi
