@@ -230,14 +230,14 @@ public class Main {
             var testPoli = new Polynomial(new int[]{1, 2, 1, 1});//,1,1,1,1,1,1,1,1,1,1,1,1)));
             var testPoli2 = new Polynomial(new int[]{1, 2, 1, 1});//,1,1,1,1,1,1,1,1,1,1,1,1)));
 
-            startO2(testPoli, testPoli2);
-            //startKaratsuba(testPoli, testPoli2,MPI.COMM_WORLD.Size());
+            //startO2(testPoli, testPoli2);
+            startKaratsuba(testPoli, testPoli2,MPI.COMM_WORLD.Size());
 
         }
         else
         {
-            partialO2(polySize);
-            //partialKaratsuba(rank);
+            //partialO2(polySize);
+            partialKaratsuba(rank);
         }
 
         var endTime = System.currentTimeMillis()/1000.0;
