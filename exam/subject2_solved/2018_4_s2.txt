@@ -1,0 +1,69 @@
+we go through all the accounts, we lock them, we add each balance to the total sum
+then we unlock all the accounts.
+It's secured from outside effects because while the balances are added all the
+accounts are locked.
+
+int totalAmount(){
+
+	int total = 0;
+
+	for(Account& a : allAccounts){
+		a.mtx.lock();
+		total += a.balance;
+	}
+	
+	for(Account& a : allAccounts){
+		a.mtx.unlock();
+	}
+	
+	return total;
+}
+
+bool transfer(Account% from, Account& to, unsigned amount){
+
+	{
+		unique_lock<mutex> lck1(from.mtx);
+		if(from.balance<amount) return false;
+		from.balance -= amount
+	}
+	{
+		unique_lock<mutex> lck2(to.mtx);
+		to.balance += amount
+	}
+
+}
+the problem here is that we have a deadlock since both of the accounts are locked.
+To solve this we need to set on an order to lock them.
+We can settle on always first locking the account with the smallest id:
+
+bool transfer(Account% from, Account& to, unsigned amount){
+
+	if(from.id < to.id) 
+	{
+		unique_lock<mutex> lck1(from.mtx);
+		unique_lock<mutex> lck2(to.mtx);
+
+		if(from.balance<amount)
+			return false;
+
+		from.balance -= amount
+	
+		
+		to.balance += amount
+	}
+	else{
+
+		unique_lock<mutex> lck2(to.mtx);
+		unique_lock<mutex> lck1(from.mtx);
+
+		if(to.balance<amount)
+			return false;
+
+		to.balance -= amount
+	
+		
+		from.balance += amount
+	
+	}
+
+}

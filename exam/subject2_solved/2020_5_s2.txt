@@ -1,0 +1,14 @@
+the concurrency issue is again that the hasValue is not synchronized in set 
+add a mutex at first line in set and lock it.
+
+
+the function we need locks the mutex,
+waits until the hasValue is set to true
+then returns the completed value
+
+T getValue() const
+    {
+        unique_lock<mutex> lck(mtx);
+        cv.wait(lck, () {return hasValue; });
+        return val;
+    }

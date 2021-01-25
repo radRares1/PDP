@@ -1,0 +1,5 @@
+the problem here is that our flag hasValue is not safe from being modified by other threads
+which will produce inconsistencies in the result. 
+The solution is to add a syncronization mechanism to the hasValue variable,
+either add a mutex and lock it around the hasValue in set function
+either make hasValue atomic<bool>

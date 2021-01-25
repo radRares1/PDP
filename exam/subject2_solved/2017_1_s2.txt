@@ -1,0 +1,70 @@
+
+
+struct Node {
+    unsigned payload;
+    Node* next;
+    Node* prev;
+    mutex mtx;
+};
+
+void insertAfter(Node* before, unsigned value) {
+    Node* node = new Node;
+    node->payload = value;
+    Node* after = before->next;
+    before->mtx.lock();
+    before->next = node;
+    before->mtx.unlock();
+    after->mtx.lock();
+    after->prev = node;
+    after->mtx.unlock();
+    node->prev = before;
+    node->next = after;
+}
+
+Here is an example that illustrates a concurrency issue:
+
+// the list A -> B
+thread1:
+  insertAfter(nodeA, x);
+thread2:
+  insertAfter(nodeA->next, y);
+It could happend that after these possible solutions:
+
+We would accept the following two cases:
+
+A -> x -> y -> B
+A -> x -> B -> y
+However, this could happen this:
+
+nodeA->x->B
+
+Solution
+Lock the two nodes simulateously
+
+
+
+sol:
+void insertAfter(Node* before, unsigned value) {
+    Node* node = new Node;
+    node->payload = value;
+    Node* after = before->next;
+    before->mtx.lock();
+    after->mtx.lock();
+    before->next = node;
+    after->prev = node;
+    before->mtx.unlock();
+    after->mtx.unlock();
+    node->prev = before;
+    node->next = after;
+}
+
+parse:
+
+void parseNode(Node* current){
+
+	current->mtx.lock();
+	print(current->value);
+	current->mtx.unlock();
+
+
+}

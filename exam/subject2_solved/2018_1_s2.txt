@@ -1,0 +1,27 @@
+use notify one and
+
+run(){
+unique_lock<mutex> lck(mtx);
+	while(true){
+//if work not empty pick a work item and exec it
+		if(!work.empty()){
+			
+			function<void()> vi = work.front();
+			work.pop_front();
+			lck.unlock();
+			vi();
+			lck.lock();
+		}
+		else if(isEnd){
+			return;
+		}
+		else{
+			cv.wait(lck);
+		}
+}
+
+void close() {
+        std::unique_lock<std::mutex> lck(m_mtx);
+        isEnd = true;
+        cv.notify_all();
+    }		

@@ -1,0 +1,40 @@
+the problem here is that the mutex is locked only when the work queue is empty
+so there will be cases when a thread will pop the wrong work.
+
+To fix this we should move the locking of the mutex outside of the while like this
+in order to change the scope of which the mutex is unlocked, because the mutex
+unlocked only at the of the while and the parallelism is killed and we would've
+pop the work only after it is executed and another thread might execute the same work.
+That's why we need to have a copy of the work, pop it then execute it and lock again.
+ 
+
+run(){
+	unique_lock<mutex> lck(mtx);
+	while(true){	
+		//if work not empty pick a work item and exec it
+		if(!work.empty()){
+			
+			function<void()> vi = work.front();
+			work.pop_front();
+			lck.unlock();
+			vi();
+			lck.lock();
+		}
+		else if(isEnd){
+			return;
+		}
+		else{
+			cv.wait(lck);
+		}
+	}
+}
+
+void close() {
+        std::unique_lock<std::mutex> lck(m_mtx);
+        isEnd = true;
+        cv.notify_all();
+    }	
+
+In order to end the threads at shutdown is create a flag isEnd and use the funciton
+close at the end of the main thread. This functions sets the flag isEnd to true and notifies all threads
+to wake up. In the run thread we check if IsEnd flag is true and if so we exit the function to end it.

@@ -1,0 +1,31 @@
+
+there is no sync in the enqueue function so we add a mutex to lock;
+
+
+void enqueue(T v){
+	unique_lock<mutex> lck(mtx)
+	if(items.size() >= 100)
+		cv.wait(mtx);
+	else{
+		items.push_back(v);
+		cv.notify_one();
+	}
+}
+
+
+T dequeue() {
+	{
+		unique_lock<mutex> lck(mtx)
+		while(items.empty()){
+
+			cv.wait(lck);
+		}
+	}
+	{
+		unique_lock<mutex> lck(mtx)
+		T ret = items.front();
+		items.pop_front()
+		cv.notify_one();
+		return ret;
+	}
+}
